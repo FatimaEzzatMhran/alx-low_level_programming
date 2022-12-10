@@ -9,20 +9,20 @@
  */
 int main(void)
 {
-	int i, j, k;
+	int i, j;
 
-	for (i = 0; i < 100; i++)
+	for (i = 0; i < 9; i++)
 	{
-		j = i / 10;
-		k = i % 10;
-
-		putchar (j + '0');
-		putchar (k + '0');
-
-		if (i < 99)
+		for (j = i + 1; j < 10; j++)
 		{
-			putchar(',');
-			putchar(' ');
+			putchar((i % 10) + '0');
+			putchar((j % 10) + '0');
+
+			if (i >= 0 && j >= 0)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	putchar('\n');
