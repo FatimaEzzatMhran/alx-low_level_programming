@@ -5,7 +5,7 @@
  * @y: second integer to be added
  * Return: The result
  */
-int add(int x, int y);
+int add(int x, int y)
 {
 	return (x + y);
 }
