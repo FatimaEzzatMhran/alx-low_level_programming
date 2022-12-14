@@ -43,12 +43,6 @@ void print_times_table(int n)
 				}
 				else
 					_putchar(result + '0');
-
-				if (second_number != n)
-				{
-					_putchar(',');
-					_putchar(' ');
-				}
 			}
 			_putchar('\n');
 		}
