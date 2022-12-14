@@ -32,16 +32,16 @@ void print_times_table(int n)
 					_putchar((result / 10) + '0');
 					_putchar((result % 10) + '0');
 				}
+				else if (second_number == 0)
+                                {
+                                        _putchar('0');
+                                        _putchar(',');
+                                }
 				else if (second_number != 0)
 				{
 					_putchar(' ');
-					_putchar(',');
+					_putchar(' ');
 					_putchar(result + '0');
-				}
-				else if (second_number == 0)
-				{
-					_putchar('0');
-					_putchar(',');
 				}
 				else
 					_putchar(result + '0');
