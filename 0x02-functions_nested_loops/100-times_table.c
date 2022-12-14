@@ -18,6 +18,9 @@ void print_times_table(int n)
 
 			for (second_number = 1; second_number <= n; second_number++)
 			{
+				_putchar(',');
+				_putchar(' ');
+
 				result = first_number * second_number;
 
 				if (result > 99)
@@ -32,11 +35,6 @@ void print_times_table(int n)
 					_putchar((result / 10) + '0');
 					_putchar((result % 10) + '0');
 				}
-				else if (second_number == 0)
-                                {
-                                        _putchar('0');
-                                        _putchar(',');
-                                }
 				else if (second_number != 0)
 				{
 					_putchar(' ');
