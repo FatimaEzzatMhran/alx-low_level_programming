@@ -20,4 +20,5 @@
 	}
 	_putchar(i % 10 + '0');
 }
+credit goes to > Bright Daniel
 */
