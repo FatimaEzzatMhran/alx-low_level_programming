@@ -2,7 +2,7 @@
 
 /**
  * puts2 - print one char out of 2 of a string
- * @str - char array
+ * @str: char array
  * Description: Print 1st char, then 3rd then 5th
  */
 void puts2(char *str)
