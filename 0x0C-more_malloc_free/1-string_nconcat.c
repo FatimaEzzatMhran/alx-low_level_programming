@@ -1,8 +1,8 @@
-#include "main.h"
+#include "holberton.h"
 #include <stdio.h>
 
 /**
- * string_nconcat - concatenate 2 strings, only 'n' bytes of s2
+ * string_nconcat - concatenate 2 strings, only n bytes of s2
  * @s1: string 1
  * @s2: string 2
  * @n: bytes to include of s2
@@ -23,7 +23,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	ptr = malloc((strlen1 + n + 1) * sizeof(char));
 	if (ptr == NULL)
 		return (NULL);
-
 	for (i = 0, c = 0; i < (strlen1 + n); i++)
 	{
 		if (i < strlen1)
