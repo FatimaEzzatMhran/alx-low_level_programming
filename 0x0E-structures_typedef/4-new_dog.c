@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stdlib.h>
 #include "dog.h"
 
@@ -26,7 +25,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	for (i = 0; name[i] != '\0'; i++)
 		;
-	doggie->name = malloc(i * sizeof(char) + 1);
+	doggie->name = malloc(sizeof(char) * i + 1);
 	if (doggie->name == NULL)
 	{
 		free(doggie);
@@ -39,7 +38,7 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	for (j = 0; owner[j] != '\0'; j++)
 		;
-	doggie->owner = malloc(j * sizeof(char) + 1);
+	doggie->owner = malloc(sizeof(char) * j + 1);
 	if (doggie->owner == NULL)
 	{
 		free(doggie->name);
