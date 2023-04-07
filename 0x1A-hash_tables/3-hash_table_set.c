@@ -18,14 +18,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 
 	if (ht == NULL || key == NULL || value == NULL)
 		return (0);
-
 	index = key_index((const unsigned char *)key, ht->size);
-
 	value_copy = strdup(value);
 	key_copy = strdup(key);
-
 	item = ht->array[index];
-
 	if (item != NULL) /* key exists */
 	{
 		while (item)
@@ -38,21 +34,16 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			item = item->next;
 		}
 	}
-
 	new_item = malloc(sizeof(hash_node_t)); /* new item */
 	if  (new_item == NULL)
 	{
 		return (0); /* fail */
 	}
-
 	new_item->key = key_copy;
 	new_item->value = value_copy;
 	new_item->next = NULL;
-
 	if (ht->array[index] != NULL)
 		new_item->next = ht->array[index];
-
 	ht->array[index] = new_item;
-
 	return (1); /* success */
 }
