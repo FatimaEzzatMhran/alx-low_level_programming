@@ -42,8 +42,6 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_item = malloc(sizeof(hash_node_t)); /* new item */
 	if  (new_item == NULL)
 	{
-		free(value_copy);
-		free(key_copy);
 		return (0); /* fail */
 	}
 
@@ -51,10 +49,10 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_item->value = value_copy;
 	new_item->next = NULL;
 
-	if (item != NULL)
+	if (ht->array[index] != NULL)
 		new_item->next = item;
 
-	item = new_item;
+	ht->array[index] = new_item;
 
 	return (1); /* success */
 }
