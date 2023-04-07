@@ -50,7 +50,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	new_item->next = NULL;
 
 	if (ht->array[index] != NULL)
-		new_item->next = ht->array[idx];
+		new_item->next = ht->array[index];
 
 	ht->array[index] = new_item;
 
