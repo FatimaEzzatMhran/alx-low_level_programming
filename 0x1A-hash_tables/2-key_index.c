@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "hash_tables.h"
 
 /**
  * key_index - Gives the index of a key and where it should be
