@@ -7,7 +7,7 @@
  */
 void hash_table_delete(hash_table_t *ht)
 {
-	hash_node_t *item, temp;
+	hash_node_t *item, *temp;
 	unsigned long int i;
 
 	if (ht == NULL)
@@ -15,7 +15,7 @@ void hash_table_delete(hash_table_t *ht)
 
 	for (i = 0; i < ht->size; i++)
 	{
-		if (ht->array[i] ! = NULL)
+		if (ht->array[i] != NULL)
 		{
 			item = ht->array[i];
 			while (item != NULL)
@@ -24,7 +24,7 @@ void hash_table_delete(hash_table_t *ht)
 				free(item->key);
 				free(item->value);
 				free(item);
-				item = temp
+				item = temp;
 			}
 		}
 	}
